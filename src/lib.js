@@ -45,6 +45,7 @@ class Browser {
   }
   async launch() {
     return puppeteer.launch({
+      ...process.env.CHROMIUM_PATH && { executablePath: process.env.CHROMIUM_PATH },
       args: [...chrome.args, "--no-sandbox", "--disable-setuid-sandbox"],
       defaultViewport: chrome.defaultViewport,
       executablePath: await chrome.executablePath,
