@@ -1,19 +1,14 @@
 {
-  "name": "osm-static-maps",
-  "version": "3.10.3",
-  "description": "Create a static image of a map with the features you want",
   "author": "Julian Perelli",
+  "bin": {
+    "osmsm": "./src/cli.js"
+  },
   "contributors": [
     {
-      "name": "Julian Perelli",
-      "email": "jperelli@gmail.com"
+      "email": "jperelli@gmail.com",
+      "name": "Julian Perelli"
     }
   ],
-  "license": "GPLv2",
-  "repository": {
-    "type": "git",
-    "url": "http://github.com/jperelli/osm-static-maps.git"
-  },
   "dependencies": {
     "chrome-aws-lambda": "^5.5.0",
     "commander": "^6.2.1",
@@ -28,20 +23,25 @@
     "mapbox-gl-leaflet": "0.0.14",
     "puppeteer-core": "^5.5.0"
   },
-  "engines": {
-    "node": ">=12"
-  },
-  "scripts": {
-    "start": "node src/cli.js serve",
-    "dev": "nodemon -e js,html src/cli.js serve",
-    "installandstartdev": "npm install && npm run dev"
-  },
-  "main": "./src/lib.js",
-  "bin": {
-    "osmsm": "./src/cli.js"
-  },
+  "description": "Create a static image of a map with the features you want",
   "devDependencies": {
     "nodemon": "2.0.6",
     "puppeteer": "^5.5.0"
-  }
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "license": "GPLv2",
+  "main": "./src/lib.js",
+  "name": "osm-static-maps",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/jperelli/osm-static-maps.git"
+  },
+  "scripts": {
+    "dev": "nodemon -e js,html src/cli.js serve",
+    "installandstartdev": "npm install && npm run dev",
+    "start": "node src/cli.js serve"
+  },
+  "version": "3.10.3"
 }

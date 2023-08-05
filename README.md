@@ -108,4 +108,3 @@ Specially to the contributors of
 - Puppeteer
 - ExpressJS
 - Handlebars
-
