@@ -1,5 +1,6 @@
 {
   "branches": [
+    "master",
     {
       "name": "geokrety",
       "prerelease": true
@@ -129,5 +130,6 @@
     ],
     "@semantic-release/changelog",
     "@semantic-release/github"
-  ]
+  ],
+  "repositoryUrl": "https://github.com/geokrety/osm-static-maps.git"
 }
