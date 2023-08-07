@@ -19,7 +19,7 @@ RUN \
 RUN \
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y \
     && \
-    /root/.cargo/bin/cargo install oxipng
+    /root/.cargo/bin/cargo install --root /usr/local oxipng
 
 WORKDIR /app
 EXPOSE 3000
