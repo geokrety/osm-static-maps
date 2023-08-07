@@ -28,6 +28,6 @@ EXPOSE 3000
 COPY --chown=node:node . /app
 RUN npm install
 
-CMD [ "npm", "run", "installandstartdev" ]
+CMD [ "npm", "run", "start" ]
 
 HEALTHCHECK CMD curl -f http://localhost:3000/health || exit 1
