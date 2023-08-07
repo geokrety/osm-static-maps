@@ -21,8 +21,13 @@ RUN \
     && \
     /root/.cargo/bin/cargo install --root /usr/local oxipng
 
+USER node
 WORKDIR /app
 EXPOSE 3000
+
+COPY --chown=node:node . /app
+RUN npm install
+
 CMD [ "npm", "run", "installandstartdev" ]
 
 HEALTHCHECK CMD curl -f http://localhost:3000/health || exit 1
